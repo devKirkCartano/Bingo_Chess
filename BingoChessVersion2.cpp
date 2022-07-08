@@ -25,6 +25,7 @@ string matrix[6][7] = {
 string columnIndicator[7] = {"1", "2", "3", "4", "5", "6", "7"};
 string playAgain;
 string Difficulty;
+string mainMenu_quitGame;
 // Display header information
 void HeaderPrompt()
 {
@@ -1187,9 +1188,19 @@ void MultiplayerMode()
     }
     SetConsoleTextAttribute(h, 14); // set text-color to yellow
 }
+
+void GoToMainMenuOrQuitGame()
+{
+    system("cls");
+    HeaderPrompt();
+    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+    cout << "\n\n\n\n\t\t   Go To Main Menu [M] or Quit Game [Q]: ";
+    cin >> mainMenu_quitGame;
+}
 int main()
 {
-    
+    do
+    {
         HeaderPrompt();
         MainPrompt();
         CheckMenu();
@@ -1222,9 +1233,13 @@ int main()
                     SetConsoleTextAttribute(h, 14); // set text-color to yellow
                     cout << "\n\n Play Again [Y/N]: ";
                     cin >> playAgain;
+                    if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
+                    {
+                        SetConsoleTextAttribute(h, 12); // set text - color red
+                        cout << "\n [ Invalid input ! ]";
+                    }
                     if (playAgain == "N" || playAgain == "n")
                     {
-                        cout << "\n Thank you for playing :)\n";
                         break;
                     }
                 } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
@@ -1258,21 +1273,51 @@ int main()
                     MatrixForAI();
                 }
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                
                 do
                 {
                     SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                    cout << "\n\n Play Again [Y/N]: ";
+                    cout << "\n Play Again [Y/N]: ";
                     cin >> playAgain;
+
+                    if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
+                    {
+                        SetConsoleTextAttribute(h, 12); // set text - color red
+                        cout << "\n [ Invalid input ! ]\n";
+                    }
                     if (playAgain == "N" || playAgain == "n")
                     {
-                        cout << "\n Thank you for playing :)\n";
                         break;
                     }
                 } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
             }
 
         } while (playAgain == "Y" || playAgain == "y");
+        
+        do 
+        {
+            GoToMainMenuOrQuitGame();
+            if (mainMenu_quitGame != "M" && mainMenu_quitGame != "m" && mainMenu_quitGame != "Q" && mainMenu_quitGame != "q")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n [ Invalid input ! ]\n";
+            }
+            if (mainMenu_quitGame == "M" || mainMenu_quitGame == "m")
+            {
+                system("cls");
+            }
+            else if (mainMenu_quitGame == "Q" || mainMenu_quitGame == "q")
+            {
+                break;
+            }
+        } while (mainMenu_quitGame != "M" && mainMenu_quitGame != "m" && mainMenu_quitGame != "Q" && mainMenu_quitGame != "q");
+    
+    } while (mainMenu_quitGame == "M" || mainMenu_quitGame == "m");
 
+    system("cls");
+    HeaderPrompt();
+    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+    cout << "\n\n\n\n\t\t\t     THANK YOU FOR PLAYING :)\n";
     system("pause");
-    return 0;
+        return 0;
 }
