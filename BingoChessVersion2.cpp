@@ -1131,6 +1131,62 @@ void DifficultyLevel()
     } while (Difficulty != "A" && Difficulty != "a" && Difficulty != "B" && Difficulty != "b" && Difficulty != "C" && Difficulty != "c");
 }
 
+void MultiplayerMode()
+{
+    while (true)
+    {
+        NumberOfTurn--;
+        SetConsoleTextAttribute(h, 10); // set text-color to green
+        cout << "\n\t\t\t   Number of Turns Left: " << NumberOfTurn << "\n\n";
+        if (playerSymbol == "X")
+        {
+            NumberOfPlayerOneTurn--;
+        }
+        else if (playerSymbol == "O")
+        {
+            NumberOfPlayerTwoTurn--;
+        }
+        InputPrompt();
+        system("cls"); // updating screen for input
+        HeaderPrompt();
+        MultiplayerDrawMatrix();
+        if (CheckWinner() == 'X')
+        {
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
+            playerSymbol = "O";
+            ChangePlayerTurn();
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == 'O')
+        {
+            SetConsoleTextAttribute(h, 12); // set text - color red
+            cout << "\n\t\t\t      [ Player 2 Wins ! ]\n";
+            ChangePlayerTurn();  // to reset player turn
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == '/' && NumberOfTurn == 1)
+        {
+            SetConsoleTextAttribute(h, 10); // set text-color to green
+            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+            if (playerSymbol == "O")
+            {
+                ChangePlayerTurn();
+            }
+            else if (playerSymbol == "X")
+            {
+                playerSymbol == "O";
+                ChangePlayerTurn();
+            }
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        ChangePlayerTurn();
+    }
+    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+}
 int main()
 {
     
@@ -1160,59 +1216,7 @@ int main()
                 system("cls");
                 HeaderPrompt();
                 MultiplayerDrawMatrix();
-                while (true)
-                {
-                    NumberOfTurn--;
-                    SetConsoleTextAttribute(h, 10); // set text-color to green
-                    cout << "\n\t\t\t   Number of Turns Left: " << NumberOfTurn << "\n\n";
-                    if (playerSymbol == "X")
-                    {
-                        NumberOfPlayerOneTurn--;
-                    }
-                    else if (playerSymbol == "O")
-                    {
-                        NumberOfPlayerTwoTurn--;
-                    }
-                    InputPrompt();
-                    system("cls"); // updating screen for input
-                    HeaderPrompt();
-                    MultiplayerDrawMatrix();
-                    if (CheckWinner() == 'X')
-                    {
-                        SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                        cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
-                        playerSymbol = "O";
-                        ChangePlayerTurn();
-                        ClearArrayContent(); // to reset matrix content
-                        break;
-                    }
-                    else if (CheckWinner() == 'O')
-                    {
-                        SetConsoleTextAttribute(h, 12); // set text - color red
-                        cout << "\n\t\t\t      [ Player 2 Wins ! ]\n";
-                        ChangePlayerTurn();  // to reset player turn
-                        ClearArrayContent(); // to reset matrix content
-                        break;
-                    }
-                    else if (CheckWinner() == '/' && NumberOfTurn == 1)
-                    {
-                        SetConsoleTextAttribute(h, 10); // set text-color to green
-                        cout << "\n\t\t\t      [ It's a Draw ! ]\n";
-                        if (playerSymbol == "O")
-                        {
-                            ChangePlayerTurn();
-                        }
-                        else if (playerSymbol == "X")
-                        {
-                            playerSymbol == "O";
-                            ChangePlayerTurn();
-                        }
-                        ClearArrayContent(); // to reset matrix content
-                        break;
-                    }
-                    ChangePlayerTurn();
-                }
-                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                MultiplayerMode();
                 do
                 {
                     SetConsoleTextAttribute(h, 14); // set text-color to yellow
