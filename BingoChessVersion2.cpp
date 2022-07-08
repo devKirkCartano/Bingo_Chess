@@ -1247,52 +1247,92 @@ int main()
         } while (playAgain == "Y" || playAgain == "y");
 
             // Versus AI
-        do 
-        {
+
             if (gameMode == "B" || gameMode == "b")
             {
                 system("cls");
                 HeaderPrompt();
                 DifficultyLevel();
-                if (Difficulty == "A" || Difficulty == "a")
-                {
-                    system("cls");
-                    HeaderPrompt();
-                    MatrixForAI();
-                }
-                else if (Difficulty == "B" || Difficulty == "b")
-                {
-                    system("cls");
-                    HeaderPrompt();
-                    MatrixForAI();
-                }
-                else if (Difficulty == "C" || Difficulty == "c")
-                {
-                    system("cls");
-                    HeaderPrompt();
-                    MatrixForAI();
-                }
-                SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                
                 do
                 {
-                    SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                    cout << "\n Play Again [Y/N]: ";
-                    cin >> playAgain;
+                    if (Difficulty == "A" || Difficulty == "a")
+                    {
+                        system("cls");
+                        HeaderPrompt();
+                        MatrixForAI();
+                        do
+                        {
+                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                            cout << "\n Play Again [Y/N]: ";
+                            cin >> playAgain;
 
-                    if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
-                    {
-                        SetConsoleTextAttribute(h, 12); // set text - color red
-                        cout << "\n [ Invalid input ! ]\n";
+                            if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
+                            {
+                                SetConsoleTextAttribute(h, 12); // set text - color red
+                                cout << "\n [ Invalid input ! ]\n";
+                            }
+                            if (playAgain == "N" || playAgain == "n")
+                            {
+                                break;
+                            }
+                        } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
                     }
-                    if (playAgain == "N" || playAgain == "n")
+                } while (playAgain == "Y" || playAgain == "y");
+
+                do
+                {
+                    if (Difficulty == "B" || Difficulty == "b")
                     {
-                        break;
+                        system("cls");
+                        HeaderPrompt();
+                        MatrixForAI();
+                        do
+                        {
+                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                            cout << "\n Play Again [Y/N]: ";
+                            cin >> playAgain;
+
+                            if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
+                            {
+                                SetConsoleTextAttribute(h, 12); // set text - color red
+                                cout << "\n [ Invalid input ! ]\n";
+                            }
+                            if (playAgain == "N" || playAgain == "n")
+                            {
+                                break;
+                            }
+                        } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
                     }
-                } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
+                } while (playAgain == "Y" || playAgain == "y");
+
+                do
+                {
+                    if (Difficulty == "C" || Difficulty == "c")
+                    {
+                        system("cls");
+                        HeaderPrompt();
+                        MatrixForAI();
+                        do
+                        {
+                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                            cout << "\n Play Again [Y/N]: ";
+                            cin >> playAgain;
+
+                            if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
+                            {
+                                SetConsoleTextAttribute(h, 12); // set text - color red
+                                cout << "\n [ Invalid input ! ]\n";
+                            }
+                            if (playAgain == "N" || playAgain == "n")
+                            {
+                                break;
+                            }
+                        } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
+                    }
+                } while (playAgain == "Y" || playAgain == "y");
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
             }
 
-        } while (playAgain == "Y" || playAgain == "y");
         
         do 
         {
