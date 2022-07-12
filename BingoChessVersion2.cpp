@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <string>
+#include <ctime>
+#include <unistd.h>
 using namespace std;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -26,6 +28,8 @@ string columnIndicator[7] = {"1", "2", "3", "4", "5", "6", "7"};
 string playAgain;
 string Difficulty;
 string mainMenu_quitGame;
+int computerChoice;
+int numComputerTurn;
 // Display header information
 void HeaderPrompt()
 {
@@ -1197,6 +1201,660 @@ void GoToMainMenuOrQuitGame()
     cout << "\n\n\n\n\t\t   Go To Main Menu [M] or Quit Game [Q]: ";
     cin >> mainMenu_quitGame;
 }
+
+void GenerateComputerChoice()
+{
+    numComputerTurn = 21;
+    srand(time(NULL));
+    computerChoice = rand() % 7 + 1;
+    SetConsoleTextAttribute(h, 12); // set text - color red
+    cout << "\n  Computer Turn [O] : ";
+    cout << "\n\n  Computer Choose Column : " << computerChoice << endl;
+    sleep(1);
+}
+
+void PromptForPlayerVSComputer()
+{
+
+}
+void InputForAI()
+{
+    do
+    {
+        if (playerSymbol == "X")
+        {
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            cout << "\n  Player 1 Turn [ X ] : ";
+            cout << "\n\n  Press the number of column you want to place your move: ";
+            cin >> playerInput;
+            cout << endl;
+            if (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7")
+            {
+                SetConsoleTextAttribute(h, 10); // set text-color to green
+                cout << "\n  [ Invalid Input ] " << endl;
+            }
+        }
+        
+    } while (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7");
+    
+    playerSymbol = "O";
+    if (playerSymbol == "O")
+    {
+        GenerateComputerChoice();
+        if (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7")
+        {
+            SetConsoleTextAttribute(h, 10); // set text-color to green
+            cout << "\n  [ Invalid Input ] " << endl;
+        }
+        ChangePlayerTurn();
+    }
+    // Change the content of 2D arrays based on input of user
+    if (playerInput == "1")
+    {
+        if (matrix[5][0] == " ")
+        {
+            matrix[5][0] = playerSymbol;
+        }
+        else if (matrix[4][0] == " ")
+        {
+            matrix[4][0] = playerSymbol;
+        }
+        else if (matrix[3][0] == " ")
+        {
+            matrix[3][0] = playerSymbol;
+        }
+        else if (matrix[2][0] == " ")
+        {
+            matrix[2][0] = playerSymbol;
+        }
+        else if (matrix[1][0] == " ")
+        {
+            matrix[1][0] = playerSymbol;
+        }
+        else if (matrix[0][0] == " ")
+        {
+            matrix[0][0] = playerSymbol;
+        }
+        else if (matrix[0][0] == "X" || matrix[0][0] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+        }
+    }
+    else if (playerInput == "2")
+    {
+        if (matrix[5][1] == " ")
+        {
+            matrix[5][1] = playerSymbol;
+        }
+        else if (matrix[4][1] == " ")
+        {
+            matrix[4][1] = playerSymbol;
+        }
+        else if (matrix[3][1] == " ")
+        {
+            matrix[3][1] = playerSymbol;
+        }
+        else if (matrix[2][1] == " ")
+        {
+            matrix[2][1] = playerSymbol;
+        }
+        else if (matrix[1][1] == " ")
+        {
+            matrix[1][1] = playerSymbol;
+        }
+        else if (matrix[0][1] == " ")
+        {
+            matrix[0][1] = playerSymbol;
+        }
+        else if (matrix[0][1] == "X" || matrix[0][1] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                InputPrompt();
+            }
+        }
+    }
+    else if (playerInput == "3")
+    {
+        if (matrix[5][2] == " ")
+        {
+            matrix[5][2] = playerSymbol;
+        }
+        else if (matrix[4][2] == " ")
+        {
+            matrix[4][2] = playerSymbol;
+        }
+        else if (matrix[3][2] == " ")
+        {
+            matrix[3][2] = playerSymbol;
+        }
+        else if (matrix[2][2] == " ")
+        {
+            matrix[2][2] = playerSymbol;
+        }
+        else if (matrix[1][2] == " ")
+        {
+            matrix[1][2] = playerSymbol;
+        }
+        else if (matrix[0][2] == " ")
+        {
+            matrix[0][2] = playerSymbol;
+        }
+        else if (matrix[0][2] == "X" || matrix[0][2] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+        }
+    }
+    else if (playerInput == "4")
+    {
+        if (matrix[5][3] == " ")
+        {
+            matrix[5][3] = playerSymbol;
+        }
+        else if (matrix[4][3] == " ")
+        {
+            matrix[4][3] = playerSymbol;
+        }
+        else if (matrix[3][3] == " ")
+        {
+            matrix[3][3] = playerSymbol;
+        }
+        else if (matrix[2][3] == " ")
+        {
+            matrix[2][3] = playerSymbol;
+        }
+        else if (matrix[1][3] == " ")
+        {
+            matrix[1][3] = playerSymbol;
+        }
+        else if (matrix[0][3] == " ")
+        {
+            matrix[0][3] = playerSymbol;
+        }
+        else if (matrix[0][3] == "X" || matrix[0][3] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+        }
+    }
+    else if (playerInput == "5")
+    {
+        if (matrix[5][4] == " ")
+        {
+            matrix[5][4] = playerSymbol;
+        }
+        else if (matrix[4][4] == " ")
+        {
+            matrix[4][4] = playerSymbol;
+        }
+        else if (matrix[3][4] == " ")
+        {
+            matrix[3][4] = playerSymbol;
+        }
+        else if (matrix[2][4] == " ")
+        {
+            matrix[2][4] = playerSymbol;
+        }
+        else if (matrix[1][4] == " ")
+        {
+            matrix[1][4] = playerSymbol;
+        }
+        else if (matrix[0][4] == " ")
+        {
+            matrix[0][4] = playerSymbol;
+        }
+        else if (matrix[0][4] == "X" || matrix[0][4] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+        }
+    }
+    else if (playerInput == "6")
+    {
+        if (matrix[5][5] == " ")
+        {
+            matrix[5][5] = playerSymbol;
+        }
+        else if (matrix[4][5] == " ")
+        {
+            matrix[4][5] = playerSymbol;
+        }
+        else if (matrix[3][5] == " ")
+        {
+            matrix[3][5] = playerSymbol;
+        }
+        else if (matrix[2][5] == " ")
+        {
+            matrix[2][5] = playerSymbol;
+        }
+        else if (matrix[1][5] == " ")
+        {
+            matrix[1][5] = playerSymbol;
+        }
+        else if (matrix[0][5] == " ")
+        {
+            matrix[0][5] = playerSymbol;
+        }
+        else if (matrix[0][5] == "X" || matrix[0][5] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+        }
+    }
+    else if (playerInput == "7")
+    {
+        if (matrix[5][6] == " ")
+        {
+            matrix[5][6] = playerSymbol;
+        }
+        else if (matrix[4][6] == " ")
+        {
+            matrix[4][6] = playerSymbol;
+        }
+        else if (matrix[3][6] == " ")
+        {
+            matrix[3][6] = playerSymbol;
+        }
+        else if (matrix[2][6] == " ")
+        {
+            matrix[2][6] = playerSymbol;
+        }
+        else if (matrix[1][6] == " ")
+        {
+            matrix[1][6] = playerSymbol;
+        }
+        else if (matrix[0][6] == " ")
+        {
+            matrix[0][6] = playerSymbol;
+        }
+        else if (matrix[0][6] == "X" || matrix[0][6] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                InputPrompt();
+            }
+        }
+    }
+    playerSymbol = "O";
+    if (computerChoice == 1 )
+    {
+        if (matrix[5][0] == " ")
+        {
+            matrix[5][0] = playerSymbol;
+        }
+        else if (matrix[4][0] == " ")
+        {
+            matrix[4][0] = playerSymbol;
+        }
+        else if (matrix[3][0] == " ")
+        {
+            matrix[3][0] = playerSymbol;
+        }
+        else if (matrix[2][0] == " ")
+        {
+            matrix[2][0] = playerSymbol;
+        }
+        else if (matrix[1][0] == " ")
+        {
+            matrix[1][0] = playerSymbol;
+        }
+        else if (matrix[0][0] == " ")
+        {
+            matrix[0][0] = playerSymbol;
+        }
+        else if (matrix[0][0] == "X" || matrix[0][0] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    else if (computerChoice == 2)
+    {
+        if (matrix[5][1] == " ")
+        {
+            matrix[5][1] = playerSymbol;
+        }
+        else if (matrix[4][1] == " ")
+        {
+            matrix[4][1] = playerSymbol;
+        }
+        else if (matrix[3][1] == " ")
+        {
+            matrix[3][1] = playerSymbol;
+        }
+        else if (matrix[2][1] == " ")
+        {
+            matrix[2][1] = playerSymbol;
+        }
+        else if (matrix[1][1] == " ")
+        {
+            matrix[1][1] = playerSymbol;
+        }
+        else if (matrix[0][1] == " ")
+        {
+            matrix[0][1] = playerSymbol;
+        }
+        else if (matrix[0][1] == "X" || matrix[0][1] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    else if (computerChoice == 3)
+    {
+        if (matrix[5][2] == " ")
+        {
+            matrix[5][2] = playerSymbol;
+        }
+        else if (matrix[4][2] == " ")
+        {
+            matrix[4][2] = playerSymbol;
+        }
+        else if (matrix[3][2] == " ")
+        {
+            matrix[3][2] = playerSymbol;
+        }
+        else if (matrix[2][2] == " ")
+        {
+            matrix[2][2] = playerSymbol;
+        }
+        else if (matrix[1][2] == " ")
+        {
+            matrix[1][2] = playerSymbol;
+        }
+        else if (matrix[0][2] == " ")
+        {
+            matrix[0][2] = playerSymbol;
+        }
+        else if (matrix[0][2] == "X" || matrix[0][2] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    else if (computerChoice == 4)
+    {
+        if (matrix[5][3] == " ")
+        {
+            matrix[5][3] = playerSymbol;
+        }
+        else if (matrix[4][3] == " ")
+        {
+            matrix[4][3] = playerSymbol;
+        }
+        else if (matrix[3][3] == " ")
+        {
+            matrix[3][3] = playerSymbol;
+        }
+        else if (matrix[2][3] == " ")
+        {
+            matrix[2][3] = playerSymbol;
+        }
+        else if (matrix[1][3] == " ")
+        {
+            matrix[1][3] = playerSymbol;
+        }
+        else if (matrix[0][3] == " ")
+        {
+            matrix[0][3] = playerSymbol;
+        }
+        else if (matrix[0][3] == "X" || matrix[0][3] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    else if (computerChoice == 5)
+    {
+        if (matrix[5][4] == " ")
+        {
+            matrix[5][4] = playerSymbol;
+        }
+        else if (matrix[4][4] == " ")
+        {
+            matrix[4][4] = playerSymbol;
+        }
+        else if (matrix[3][4] == " ")
+        {
+            matrix[3][4] = playerSymbol;
+        }
+        else if (matrix[2][4] == " ")
+        {
+            matrix[2][4] = playerSymbol;
+        }
+        else if (matrix[1][4] == " ")
+        {
+            matrix[1][4] = playerSymbol;
+        }
+        else if (matrix[0][4] == " ")
+        {
+            matrix[0][4] = playerSymbol;
+        }
+        else if (matrix[0][4] == "X" || matrix[0][4] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    else if (computerChoice == 6)
+    {
+        if (matrix[5][5] == " ")
+        {
+            matrix[5][5] = playerSymbol;
+        }
+        else if (matrix[4][5] == " ")
+        {
+            matrix[4][5] = playerSymbol;
+        }
+        else if (matrix[3][5] == " ")
+        {
+            matrix[3][5] = playerSymbol;
+        }
+        else if (matrix[2][5] == " ")
+        {
+            matrix[2][5] = playerSymbol;
+        }
+        else if (matrix[1][5] == " ")
+        {
+            matrix[1][5] = playerSymbol;
+        }
+        else if (matrix[0][5] == " ")
+        {
+            matrix[0][5] = playerSymbol;
+        }
+        else if (matrix[0][5] == "X" || matrix[0][5] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    else if (computerChoice == 7)
+    {
+        if (matrix[5][6] == " ")
+        {
+            matrix[5][6] = playerSymbol;
+        }
+        else if (matrix[4][6] == " ")
+        {
+            matrix[4][6] = playerSymbol;
+        }
+        else if (matrix[3][6] == " ")
+        {
+            matrix[3][6] = playerSymbol;
+        }
+        else if (matrix[2][6] == " ")
+        {
+            matrix[2][6] = playerSymbol;
+        }
+        else if (matrix[1][6] == " ")
+        {
+            matrix[1][6] = playerSymbol;
+        }
+        else if (matrix[0][6] == " ")
+        {
+            matrix[0][6] = playerSymbol;
+        }
+        else if (matrix[0][6] == "X" || matrix[0][6] == "O")
+        {
+            if (playerSymbol == "X")
+            {
+                SetConsoleTextAttribute(h, 12); // set text - color red
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+            else
+            {
+                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                cout << "\n  [ Column is already filled ! ]" << endl;
+                sleep(0.5);
+                GenerateComputerChoice();
+            }
+        }
+    }
+    
+}
 int main()
 {
     do
@@ -1255,11 +1913,65 @@ int main()
                 DifficultyLevel();
                 do
                 {
+                    NumberOfTurn = 43;
+                    system("cls");
                     if (Difficulty == "A" || Difficulty == "a")
                     {
                         system("cls");
                         HeaderPrompt();
                         MatrixForAI();
+                        while (true)
+                        {
+                            NumberOfTurn--;
+                            SetConsoleTextAttribute(h, 10); // set text-color to green
+                            if (playerSymbol == "X")
+                            {
+                                NumberOfPlayerOneTurn--;
+                            }
+                            else if (playerSymbol == "O")
+                            {
+                                numComputerTurn--;
+                            }
+                            InputForAI();
+                            system("cls"); // updating screen for input
+                            HeaderPrompt();
+                            MatrixForAI();
+                            if (CheckWinner() == 'X')
+                            {
+                                SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                                cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
+                                playerSymbol = "O";
+                                ChangePlayerTurn();
+                                ClearArrayContent(); // to reset matrix content
+                                break;
+                            }
+                            else if (CheckWinner() == 'O')
+                            {
+                                SetConsoleTextAttribute(h, 12); // set text - color red
+                                cout << "\n\t\t\t      [ Player 2 Wins ! ]\n";
+                                ChangePlayerTurn();  // to reset player turn
+                                ClearArrayContent(); // to reset matrix content
+                                break;
+                            }
+                            else if (CheckWinner() == '/' && NumberOfTurn == 1)
+                            {
+                                SetConsoleTextAttribute(h, 10); // set text-color to green
+                                cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+                                if (playerSymbol == "O")
+                                {
+                                    ChangePlayerTurn();
+                                }
+                                else if (playerSymbol == "X")
+                                {
+                                    playerSymbol == "O";
+                                    ChangePlayerTurn();
+                                }
+                                ClearArrayContent(); // to reset matrix content
+                                break;
+                            }
+                            ChangePlayerTurn();
+                        }
+                        SetConsoleTextAttribute(h, 14); // set text-color to yellow
                         do
                         {
                             SetConsoleTextAttribute(h, 14); // set text-color to yellow
