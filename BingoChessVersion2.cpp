@@ -1213,7 +1213,7 @@ void GenerateComputerChoice()
     sleep(1);
 }
 
-void InputForAI()
+void InputForEasyAI()
 {
     do
     {
@@ -1922,7 +1922,7 @@ int main()
                             {
                                 numComputerTurn--;
                             }
-                            InputForAI();
+                            InputForEasyAI();
                             system("cls"); // updating screen for input
                             HeaderPrompt();
                             MatrixForAI();
