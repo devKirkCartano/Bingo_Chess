@@ -1932,6 +1932,26 @@ void EasyAI_Mode()
     SetConsoleTextAttribute(h, 14); // set text-color to yellow
 }
 
+void InputForInterAI()
+{
+    cout << endl;
+    do
+    {
+        if (playerSymbol == "X")
+        {
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            cout << "\n  Player 1 Turn [ X ] : ";
+            cout << "\n\n  Press the number of column you want to place your move: ";
+            cin >> playerInput;
+            if (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7")
+            {
+                SetConsoleTextAttribute(h, 10); // set text-color to green
+                cout << "\n  [ Invalid Input ] " << endl;
+            }
+        }
+    } while (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7");
+}
+
 int main()
 {
     do
@@ -2020,11 +2040,57 @@ int main()
 
             do
             {
+                NumberOfTurn = 43;
+                system("cls");
                 if (Difficulty == "B" || Difficulty == "b")
                 {
                     system("cls");
                     HeaderPrompt();
                     MatrixForAI();
+                    while (true)
+                    {
+                        NumberOfTurn--;
+                        SetConsoleTextAttribute(h, 10); // set text-color to green
+                        InputForInterAI();
+                        system("cls"); // updating screen for input
+                        HeaderPrompt();
+                        MatrixForAI();
+                        if (CheckWinner() == 'X')
+                        {
+                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
+                            playerSymbol = "O";
+                            ChangePlayerTurn();
+                            ClearArrayContent(); // to reset matrix content
+                            break;
+                        }
+                        else if (CheckWinner() == 'O')
+                        {
+                            SetConsoleTextAttribute(h, 12); // set text - color red
+                            cout << "\n\t\t\t      [ Computer Wins ! ]\n";
+                            ChangePlayerTurn();  // to reset player turn
+                            ClearArrayContent(); // to reset matrix content
+                            break;
+                        }
+                        else if (CheckWinner() == '/' && NumberOfTurn == 1)
+                        {
+                            SetConsoleTextAttribute(h, 10); // set text-color to green
+                            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+                            if (playerSymbol == "O")
+                            {
+                                ChangePlayerTurn();
+                            }
+                            else if (playerSymbol == "X")
+                            {
+                                playerSymbol == "O";
+                                ChangePlayerTurn();
+                            }
+                            ClearArrayContent(); // to reset matrix content
+                            break;
+                        }
+                        ChangePlayerTurn();
+                    }
+                    SetConsoleTextAttribute(h, 14); // set text-color to yellow
                     do
                     {
                         SetConsoleTextAttribute(h, 14); // set text-color to yellow
