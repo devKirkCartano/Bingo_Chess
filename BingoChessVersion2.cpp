@@ -168,39 +168,81 @@ void MultiplayerDrawMatrix()
     // Row 1
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[0][0] << "  |" << "  " << matrix[0][1] << "  |" <<"  " << matrix[0][2] << "  |" <<"  " << matrix[0][3] << "  |" << "  " << matrix[0][4] << "  |"<< "  " << matrix[0][5] << "  |" << "  " << matrix[0][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[0][0] << "  |"
+         << "  " << matrix[0][1] << "  |"
+         << "  " << matrix[0][2] << "  |"
+         << "  " << matrix[0][3] << "  |"
+         << "  " << matrix[0][4] << "  |"
+         << "  " << matrix[0][5] << "  |"
+         << "  " << matrix[0][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 2
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[1][0] << "  |" << "  " << matrix[1][1] << "  |" <<"  " << matrix[1][2] << "  |" <<"  " << matrix[1][3] << "  |" << "  " << matrix[1][4] << "  |"<< "  " << matrix[1][5] << "  |" << "  " << matrix[1][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[1][0] << "  |"
+         << "  " << matrix[1][1] << "  |"
+         << "  " << matrix[1][2] << "  |"
+         << "  " << matrix[1][3] << "  |"
+         << "  " << matrix[1][4] << "  |"
+         << "  " << matrix[1][5] << "  |"
+         << "  " << matrix[1][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 3
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[2][0] << "  |" << "  " << matrix[2][1] << "  |" <<"  " << matrix[2][2] << "  |" <<"  " << matrix[2][3] << "  |" << "  " << matrix[2][4] << "  |"<< "  " << matrix[2][5] << "  |" << "  " << matrix[2][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[2][0] << "  |"
+         << "  " << matrix[2][1] << "  |"
+         << "  " << matrix[2][2] << "  |"
+         << "  " << matrix[2][3] << "  |"
+         << "  " << matrix[2][4] << "  |"
+         << "  " << matrix[2][5] << "  |"
+         << "  " << matrix[2][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 4
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[3][0] << "  |" << "  " << matrix[3][1] << "  |" <<"  " << matrix[3][2] << "  |" <<"  " << matrix[3][3] << "  |" << "  " << matrix[3][4] << "  |"<< "  " << matrix[3][5] << "  |" << "  " << matrix[3][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[3][0] << "  |"
+         << "  " << matrix[3][1] << "  |"
+         << "  " << matrix[3][2] << "  |"
+         << "  " << matrix[3][3] << "  |"
+         << "  " << matrix[3][4] << "  |"
+         << "  " << matrix[3][5] << "  |"
+         << "  " << matrix[3][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 5
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[4][0] << "  |" << "  " << matrix[4][1] << "  |" <<"  " << matrix[4][2] << "  |" <<"  " << matrix[4][3] << "  |" << "  " << matrix[4][4] << "  |"<< "  " << matrix[4][5] << "  |" << "  " << matrix[4][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[4][0] << "  |"
+         << "  " << matrix[4][1] << "  |"
+         << "  " << matrix[4][2] << "  |"
+         << "  " << matrix[4][3] << "  |"
+         << "  " << matrix[4][4] << "  |"
+         << "  " << matrix[4][5] << "  |"
+         << "  " << matrix[4][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 6
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[5][0] << "  |" << "  " << matrix[5][1] << "  |" <<"  " << matrix[5][2] << "  |" <<"  " << matrix[5][3] << "  |" << "  " << matrix[5][4] << "  |"<< "  " << matrix[5][5] << "  |" << "  " << matrix[5][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[5][0] << "  |"
+         << "  " << matrix[5][1] << "  |"
+         << "  " << matrix[5][2] << "  |"
+         << "  " << matrix[5][3] << "  |"
+         << "  " << matrix[5][4] << "  |"
+         << "  " << matrix[5][5] << "  |"
+         << "  " << matrix[5][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Column Indicator
     SetConsoleTextAttribute(h, 9);
     cout << "\n\t\t\t       Column Indicator\n";
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << columnIndicator[0] << "  |" << "  " << columnIndicator[1] << "  |" <<"  " << columnIndicator[2] << "  |" <<"  " << columnIndicator[3] << "  |" << "  " << columnIndicator[4] << "  |"<< "  " << columnIndicator[5] << "  |" << "  " << columnIndicator[6] << "  |" << endl;
+    cout << "\t\t  |  " << columnIndicator[0] << "  |"
+         << "  " << columnIndicator[1] << "  |"
+         << "  " << columnIndicator[2] << "  |"
+         << "  " << columnIndicator[3] << "  |"
+         << "  " << columnIndicator[4] << "  |"
+         << "  " << columnIndicator[5] << "  |"
+         << "  " << columnIndicator[6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
 }
 
@@ -277,7 +319,7 @@ void InputPrompt()
                 InputPrompt();
             }
         }
-    } 
+    }
     else if (playerInput == "2")
     {
         if (matrix[5][1] == " ")
@@ -319,7 +361,7 @@ void InputPrompt()
                 InputPrompt();
             }
         }
-    } 
+    }
     else if (playerInput == "3")
     {
         if (matrix[5][2] == " ")
@@ -1077,39 +1119,81 @@ void MatrixForAI()
     // Row 1
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[0][0] << "  |" << "  " << matrix[0][1] << "  |" <<"  " << matrix[0][2] << "  |" <<"  " << matrix[0][3] << "  |" << "  " << matrix[0][4] << "  |"<< "  " << matrix[0][5] << "  |" << "  " << matrix[0][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[0][0] << "  |"
+         << "  " << matrix[0][1] << "  |"
+         << "  " << matrix[0][2] << "  |"
+         << "  " << matrix[0][3] << "  |"
+         << "  " << matrix[0][4] << "  |"
+         << "  " << matrix[0][5] << "  |"
+         << "  " << matrix[0][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 2
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[1][0] << "  |" << "  " << matrix[1][1] << "  |" <<"  " << matrix[1][2] << "  |" <<"  " << matrix[1][3] << "  |" << "  " << matrix[1][4] << "  |"<< "  " << matrix[1][5] << "  |" << "  " << matrix[1][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[1][0] << "  |"
+         << "  " << matrix[1][1] << "  |"
+         << "  " << matrix[1][2] << "  |"
+         << "  " << matrix[1][3] << "  |"
+         << "  " << matrix[1][4] << "  |"
+         << "  " << matrix[1][5] << "  |"
+         << "  " << matrix[1][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 3
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[2][0] << "  |" << "  " << matrix[2][1] << "  |" <<"  " << matrix[2][2] << "  |" <<"  " << matrix[2][3] << "  |" << "  " << matrix[2][4] << "  |"<< "  " << matrix[2][5] << "  |" << "  " << matrix[2][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[2][0] << "  |"
+         << "  " << matrix[2][1] << "  |"
+         << "  " << matrix[2][2] << "  |"
+         << "  " << matrix[2][3] << "  |"
+         << "  " << matrix[2][4] << "  |"
+         << "  " << matrix[2][5] << "  |"
+         << "  " << matrix[2][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 4
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[3][0] << "  |" << "  " << matrix[3][1] << "  |" <<"  " << matrix[3][2] << "  |" <<"  " << matrix[3][3] << "  |" << "  " << matrix[3][4] << "  |"<< "  " << matrix[3][5] << "  |" << "  " << matrix[3][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[3][0] << "  |"
+         << "  " << matrix[3][1] << "  |"
+         << "  " << matrix[3][2] << "  |"
+         << "  " << matrix[3][3] << "  |"
+         << "  " << matrix[3][4] << "  |"
+         << "  " << matrix[3][5] << "  |"
+         << "  " << matrix[3][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 5
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[4][0] << "  |" << "  " << matrix[4][1] << "  |" <<"  " << matrix[4][2] << "  |" <<"  " << matrix[4][3] << "  |" << "  " << matrix[4][4] << "  |"<< "  " << matrix[4][5] << "  |" << "  " << matrix[4][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[4][0] << "  |"
+         << "  " << matrix[4][1] << "  |"
+         << "  " << matrix[4][2] << "  |"
+         << "  " << matrix[4][3] << "  |"
+         << "  " << matrix[4][4] << "  |"
+         << "  " << matrix[4][5] << "  |"
+         << "  " << matrix[4][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Row 6
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << matrix[5][0] << "  |" << "  " << matrix[5][1] << "  |" <<"  " << matrix[5][2] << "  |" <<"  " << matrix[5][3] << "  |" << "  " << matrix[5][4] << "  |"<< "  " << matrix[5][5] << "  |" << "  " << matrix[5][6] << "  |" << endl;
+    cout << "\t\t  |  " << matrix[5][0] << "  |"
+         << "  " << matrix[5][1] << "  |"
+         << "  " << matrix[5][2] << "  |"
+         << "  " << matrix[5][3] << "  |"
+         << "  " << matrix[5][4] << "  |"
+         << "  " << matrix[5][5] << "  |"
+         << "  " << matrix[5][6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     // Column Indicator
     SetConsoleTextAttribute(h, 9);
     cout << "\n\t\t\t       Column Indicator\n";
     cout << "\t\t   _____ _____ _____ _____ _____ _____ _____\n";
     cout << "\t\t  |     |     |     |     |     |     |     |\n";
-    cout << "\t\t  |  " << columnIndicator[0] << "  |" << "  " << columnIndicator[1] << "  |" <<"  " << columnIndicator[2] << "  |" <<"  " << columnIndicator[3] << "  |" << "  " << columnIndicator[4] << "  |"<< "  " << columnIndicator[5] << "  |" << "  " << columnIndicator[6] << "  |" << endl;
+    cout << "\t\t  |  " << columnIndicator[0] << "  |"
+         << "  " << columnIndicator[1] << "  |"
+         << "  " << columnIndicator[2] << "  |"
+         << "  " << columnIndicator[3] << "  |"
+         << "  " << columnIndicator[4] << "  |"
+         << "  " << columnIndicator[5] << "  |"
+         << "  " << columnIndicator[6] << "  |" << endl;
     cout << "\t\t  |_____|_____|_____|_____|_____|_____|_____|\n";
     SetConsoleTextAttribute(h, 10);
 }
@@ -1215,6 +1299,7 @@ void GenerateComputerChoice()
 
 void InputForEasyAI()
 {
+    cout << endl;
     do
     {
         if (playerSymbol == "X")
@@ -1229,9 +1314,9 @@ void InputForEasyAI()
                 cout << "\n  [ Invalid Input ] " << endl;
             }
         }
-        
+
     } while (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7");
-    
+
     ChangePlayerTurn();
     if (playerSymbol == "O")
     {
@@ -1538,8 +1623,9 @@ void InputForEasyAI()
             }
         }
     }
+
     playerSymbol = "O";
-    if (computerChoice == 1 )
+    if (computerChoice == 1)
     {
         if (matrix[5][0] == " ")
         {
@@ -1567,17 +1653,12 @@ void InputForEasyAI()
         }
         else if (matrix[0][0] == "X" || matrix[0][0] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
@@ -1609,17 +1690,12 @@ void InputForEasyAI()
         }
         else if (matrix[0][1] == "X" || matrix[0][1] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
@@ -1651,19 +1727,12 @@ void InputForEasyAI()
         }
         else if (matrix[0][2] == "X" || matrix[0][2] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
@@ -1695,19 +1764,12 @@ void InputForEasyAI()
         }
         else if (matrix[0][3] == "X" || matrix[0][3] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
@@ -1739,19 +1801,12 @@ void InputForEasyAI()
         }
         else if (matrix[0][4] == "X" || matrix[0][4] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
@@ -1783,19 +1838,12 @@ void InputForEasyAI()
         }
         else if (matrix[0][5] == "X" || matrix[0][5] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
@@ -1827,24 +1875,73 @@ void InputForEasyAI()
         }
         else if (matrix[0][6] == "X" || matrix[0][6] == "O")
         {
-            if (playerSymbol == "X")
-            {
-                SetConsoleTextAttribute(h, 12); // set text - color red
-                cout << "\n  [ Column is already filled ! ]" << endl;
-                
-                GenerateComputerChoice();
-            }
-            else
+            if (playerSymbol == "O")
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                
                 GenerateComputerChoice();
+                InputForEasyAI();
             }
         }
     }
-    
 }
+
+void EasyAI_Mode()
+{
+    while (true)
+    {
+        NumberOfTurn--;
+        SetConsoleTextAttribute(h, 10); // set text-color to green
+        if (playerSymbol == "X")
+        {
+            NumberOfPlayerOneTurn--;
+        }
+        else if (playerSymbol == "O")
+        {
+            numComputerTurn--;
+        }
+        InputForEasyAI();
+        system("cls"); // updating screen for input
+        HeaderPrompt();
+        MatrixForAI();
+        if (CheckWinner() == 'X')
+        {
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
+            playerSymbol = "O";
+            ChangePlayerTurn();
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == 'O')
+        {
+            SetConsoleTextAttribute(h, 12); // set text - color red
+            cout << "\n\t\t\t      [ Computer Wins ! ]\n";
+            ChangePlayerTurn();  // to reset player turn
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == '/' && NumberOfTurn == 1)
+        {
+            SetConsoleTextAttribute(h, 10); // set text-color to green
+            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+            if (playerSymbol == "O")
+            {
+                ChangePlayerTurn();
+            }
+            else if (playerSymbol == "X")
+            {
+                playerSymbol == "O";
+                ChangePlayerTurn();
+            }
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        ChangePlayerTurn();
+    }
+    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+}
+
 int main()
 {
     do
@@ -1863,7 +1960,7 @@ int main()
             PlayGameMenu();
             GoToGameMode();
         }
-    // Multiplayer Game
+        // Multiplayer Game
         do
         {
             NumberOfTurn = 43;
@@ -1894,149 +1991,98 @@ int main()
             }
         } while (playAgain == "Y" || playAgain == "y");
 
-            // Versus AI
+        // Versus AI
 
-            if (gameMode == "B" || gameMode == "b")
+        if (gameMode == "B" || gameMode == "b")
+        {
+            system("cls");
+            HeaderPrompt();
+            DifficultyLevel();
+            do
             {
+                NumberOfTurn = 43;
                 system("cls");
-                HeaderPrompt();
-                DifficultyLevel();
-                do
+                if (Difficulty == "A" || Difficulty == "a")
                 {
-                    NumberOfTurn = 43;
                     system("cls");
-                    if (Difficulty == "A" || Difficulty == "a")
+                    HeaderPrompt();
+                    MatrixForAI();
+                    EasyAI_Mode();
+
+                    do
                     {
-                        system("cls");
-                        HeaderPrompt();
-                        MatrixForAI();
-                        while (true)
-                        {
-                            NumberOfTurn--;
-                            SetConsoleTextAttribute(h, 10); // set text-color to green
-                            if (playerSymbol == "X")
-                            {
-                                NumberOfPlayerOneTurn--;
-                            }
-                            else if (playerSymbol == "O")
-                            {
-                                numComputerTurn--;
-                            }
-                            InputForEasyAI();
-                            system("cls"); // updating screen for input
-                            HeaderPrompt();
-                            MatrixForAI();
-                            if (CheckWinner() == 'X')
-                            {
-                                SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                                cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
-                                playerSymbol = "O";
-                                ChangePlayerTurn();
-                                ClearArrayContent(); // to reset matrix content
-                                break;
-                            }
-                            else if (CheckWinner() == 'O')
-                            {
-                                SetConsoleTextAttribute(h, 12); // set text - color red
-                                cout << "\n\t\t\t      [ Computer Wins ! ]\n";
-                                ChangePlayerTurn();  // to reset player turn
-                                ClearArrayContent(); // to reset matrix content
-                                break;
-                            }
-                            else if (CheckWinner() == '/' && NumberOfTurn == 1)
-                            {
-                                SetConsoleTextAttribute(h, 10); // set text-color to green
-                                cout << "\n\t\t\t      [ It's a Draw ! ]\n";
-                                if (playerSymbol == "O")
-                                {
-                                    ChangePlayerTurn();
-                                }
-                                else if (playerSymbol == "X")
-                                {
-                                    playerSymbol == "O";
-                                    ChangePlayerTurn();
-                                }
-                                ClearArrayContent(); // to reset matrix content
-                                break;
-                            }
-                            ChangePlayerTurn();
-                        }
                         SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                        do
+                        cout << "\n Play Again [Y/N]: ";
+                        cin >> playAgain;
+
+                        if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
                         {
-                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                            cout << "\n Play Again [Y/N]: ";
-                            cin >> playAgain;
+                            SetConsoleTextAttribute(h, 12); // set text - color red
+                            cout << "\n [ Invalid input ! ]\n";
+                        }
+                        if (playAgain == "N" || playAgain == "n")
+                        {
+                            break;
+                        }
+                    } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
+                }
+            } while (playAgain == "Y" || playAgain == "y");
 
-                            if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
-                            {
-                                SetConsoleTextAttribute(h, 12); // set text - color red
-                                cout << "\n [ Invalid input ! ]\n";
-                            }
-                            if (playAgain == "N" || playAgain == "n")
-                            {
-                                break;
-                            }
-                        } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
-                    }
-                } while (playAgain == "Y" || playAgain == "y");
-
-                do
+            do
+            {
+                if (Difficulty == "B" || Difficulty == "b")
                 {
-                    if (Difficulty == "B" || Difficulty == "b")
+                    system("cls");
+                    HeaderPrompt();
+                    MatrixForAI();
+                    do
                     {
-                        system("cls");
-                        HeaderPrompt();
-                        MatrixForAI();
-                        do
+                        SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                        cout << "\n Play Again [Y/N]: ";
+                        cin >> playAgain;
+
+                        if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
                         {
-                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                            cout << "\n Play Again [Y/N]: ";
-                            cin >> playAgain;
+                            SetConsoleTextAttribute(h, 12); // set text - color red
+                            cout << "\n [ Invalid input ! ]\n";
+                        }
+                        if (playAgain == "N" || playAgain == "n")
+                        {
+                            break;
+                        }
+                    } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
+                }
+            } while (playAgain == "Y" || playAgain == "y");
 
-                            if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
-                            {
-                                SetConsoleTextAttribute(h, 12); // set text - color red
-                                cout << "\n [ Invalid input ! ]\n";
-                            }
-                            if (playAgain == "N" || playAgain == "n")
-                            {
-                                break;
-                            }
-                        } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
-                    }
-                } while (playAgain == "Y" || playAgain == "y");
-
-                do
+            do
+            {
+                if (Difficulty == "C" || Difficulty == "c")
                 {
-                    if (Difficulty == "C" || Difficulty == "c")
+                    system("cls");
+                    HeaderPrompt();
+                    MatrixForAI();
+                    do
                     {
-                        system("cls");
-                        HeaderPrompt();
-                        MatrixForAI();
-                        do
+                        SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                        cout << "\n Play Again [Y/N]: ";
+                        cin >> playAgain;
+
+                        if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
                         {
-                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                            cout << "\n Play Again [Y/N]: ";
-                            cin >> playAgain;
+                            SetConsoleTextAttribute(h, 12); // set text - color red
+                            cout << "\n [ Invalid input ! ]\n";
+                        }
+                        if (playAgain == "N" || playAgain == "n")
+                        {
+                            break;
+                        }
+                    } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
+                }
+            } while (playAgain == "Y" || playAgain == "y");
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+        }
 
-                            if (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n")
-                            {
-                                SetConsoleTextAttribute(h, 12); // set text - color red
-                                cout << "\n [ Invalid input ! ]\n";
-                            }
-                            if (playAgain == "N" || playAgain == "n")
-                            {
-                                break;
-                            }
-                        } while (playAgain != "Y" && playAgain != "y" && playAgain != "N" && playAgain != "n");
-                    }
-                } while (playAgain == "Y" || playAgain == "y");
-                SetConsoleTextAttribute(h, 14); // set text-color to yellow
-            }
-
-        
-        do 
+        do
         {
             GoToMainMenuOrQuitGame();
             if (mainMenu_quitGame != "M" && mainMenu_quitGame != "m" && mainMenu_quitGame != "Q" && mainMenu_quitGame != "q")
@@ -2053,7 +2099,7 @@ int main()
                 break;
             }
         } while (mainMenu_quitGame != "M" && mainMenu_quitGame != "m" && mainMenu_quitGame != "Q" && mainMenu_quitGame != "q");
-    
+
     } while (mainMenu_quitGame == "M" || mainMenu_quitGame == "m");
 
     system("cls");
@@ -2061,5 +2107,5 @@ int main()
     SetConsoleTextAttribute(h, 14); // set text-color to yellow
     cout << "\n\n\n\n\t\t\t     THANK YOU FOR PLAYING :)\n";
     system("pause");
-        return 0;
+    return 0;
 }
