@@ -29,7 +29,6 @@ string playAgain;
 string Difficulty;
 string mainMenu_quitGame;
 int computerChoice;
-int numComputerTurn;
 // Display header information
 void HeaderPrompt()
 {
@@ -1288,7 +1287,6 @@ void GoToMainMenuOrQuitGame()
 
 void GenerateComputerChoice()
 {
-    numComputerTurn = 21;
     srand(time(NULL));
     computerChoice = rand() % 7 + 1;
     SetConsoleTextAttribute(h, 12); // set text - color red
@@ -1361,13 +1359,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1403,13 +1401,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1445,13 +1443,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1487,13 +1485,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1529,13 +1527,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1571,13 +1569,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1613,13 +1611,13 @@ void InputForEasyAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                InputPrompt();
+                InputForEasyAI();
             }
         }
     }
@@ -1892,14 +1890,6 @@ void EasyAI_Mode()
     {
         NumberOfTurn--;
         SetConsoleTextAttribute(h, 10); // set text-color to green
-        if (playerSymbol == "X")
-        {
-            NumberOfPlayerOneTurn--;
-        }
-        else if (playerSymbol == "O")
-        {
-            numComputerTurn--;
-        }
         InputForEasyAI();
         system("cls"); // updating screen for input
         HeaderPrompt();
