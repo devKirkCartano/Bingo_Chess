@@ -1213,10 +1213,6 @@ void GenerateComputerChoice()
     sleep(1);
 }
 
-void PromptForPlayerVSComputer()
-{
-
-}
 void InputForAI()
 {
     do
@@ -1227,7 +1223,6 @@ void InputForAI()
             cout << "\n  Player 1 Turn [ X ] : ";
             cout << "\n\n  Press the number of column you want to place your move: ";
             cin >> playerInput;
-            cout << endl;
             if (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7")
             {
                 SetConsoleTextAttribute(h, 10); // set text-color to green
@@ -1237,7 +1232,7 @@ void InputForAI()
         
     } while (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7");
     
-    playerSymbol = "O";
+    ChangePlayerTurn();
     if (playerSymbol == "O")
     {
         GenerateComputerChoice();
@@ -1329,7 +1324,6 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
                 InputPrompt();
             }
         }
@@ -1577,14 +1571,12 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
                 GenerateComputerChoice();
             }
         }
@@ -1621,14 +1613,12 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
                 GenerateComputerChoice();
             }
         }
@@ -1665,14 +1655,14 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
         }
@@ -1709,14 +1699,14 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
         }
@@ -1753,14 +1743,14 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
         }
@@ -1797,14 +1787,14 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
         }
@@ -1841,14 +1831,14 @@ void InputForAI()
             {
                 SetConsoleTextAttribute(h, 12); // set text - color red
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
             else
             {
                 SetConsoleTextAttribute(h, 14); // set text-color to yellow
                 cout << "\n  [ Column is already filled ! ]" << endl;
-                sleep(0.5);
+                
                 GenerateComputerChoice();
             }
         }
@@ -1948,7 +1938,7 @@ int main()
                             else if (CheckWinner() == 'O')
                             {
                                 SetConsoleTextAttribute(h, 12); // set text - color red
-                                cout << "\n\t\t\t      [ Player 2 Wins ! ]\n";
+                                cout << "\n\t\t\t      [ Computer Wins ! ]\n";
                                 ChangePlayerTurn();  // to reset player turn
                                 ClearArrayContent(); // to reset matrix content
                                 break;
