@@ -1243,6 +1243,10 @@ void MultiplayerMode()
             SetConsoleTextAttribute(h, 14); // set text-color to yellow
             cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
             playerSymbol = "O";
+            mainMenu = "";
+            goToMainMenu = "";
+            gameMode = "";
+            Difficulty = "";
             ChangePlayerTurn();
             ClearArrayContent(); // to reset matrix content
             break;
@@ -1251,6 +1255,10 @@ void MultiplayerMode()
         {
             SetConsoleTextAttribute(h, 12); // set text - color red
             cout << "\n\t\t\t      [ Player 2 Wins ! ]\n";
+            mainMenu = "";
+            goToMainMenu = "";
+            gameMode = "";
+            Difficulty = "";
             ChangePlayerTurn();  // to reset player turn
             ClearArrayContent(); // to reset matrix content
             break;
@@ -1259,6 +1267,10 @@ void MultiplayerMode()
         {
             SetConsoleTextAttribute(h, 10); // set text-color to green
             cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+            mainMenu = "";
+            goToMainMenu = "";
+            gameMode = "";
+            Difficulty = "";
             if (playerSymbol == "O")
             {
                 ChangePlayerTurn();
