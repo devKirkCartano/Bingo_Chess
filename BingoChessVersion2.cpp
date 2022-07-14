@@ -56,7 +56,7 @@ void CheckMenu()
     do
     {
         SetConsoleTextAttribute(h, 14);
-        cout << "\n\tPress specified key: ";
+        cout << "\n\tPress [A] or [B]: ";
         cin >> mainMenu;
         if (mainMenu != "A" && mainMenu != "a" && mainMenu != "B" && mainMenu != "b")
         {
@@ -82,7 +82,7 @@ void PlayGameMenu()
     do
     {
         SetConsoleTextAttribute(h, 14);
-        cout << "\n\tPress specified key: ";
+        cout << "\n\tPress [A] or [B]: ";
         cin >> mainMenu;
         if (mainMenu != "A" && mainMenu != "a" && mainMenu != "B" && mainMenu != "b")
         {
@@ -115,7 +115,7 @@ void GoToTutorial()
         do
         {
             SetConsoleTextAttribute(h, 14); // set text-color to yellow
-            cout << "\n\tPress M to go main menu: ";
+            cout << "\n\tPress [M] to go main menu: ";
             cin >> goToMainMenu;
             if (goToMainMenu != "M" && goToMainMenu != "m")
             {
@@ -142,7 +142,7 @@ void GoToGameMode()
         do
         {
             SetConsoleTextAttribute(h, 14);
-            cout << "\n\tChoose game mode: ";
+            cout << "\n\tPress [A] or [B]: ";
             cin >> gameMode;
             if (gameMode != "A" && gameMode != "a" && gameMode != "B" && gameMode != "b")
             {
@@ -1209,7 +1209,7 @@ void DifficultyLevel()
     do
     {
         SetConsoleTextAttribute(h, 14);
-        cout << "\n\tChoose Difficulty: ";
+        cout << "\n\tPress [A], [B], or [C]: ";
         cin >> Difficulty;
         if (Difficulty != "A" && Difficulty != "a" && Difficulty != "B" && Difficulty != "b" && Difficulty != "C" && Difficulty != "c")
         {
