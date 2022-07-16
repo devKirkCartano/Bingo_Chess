@@ -928,6 +928,8 @@ char CheckWinner()
         return 'O';
     return '/';
 }
+
+// Clear content for play again
 void ClearArrayContent()
 {
     // Row 1
