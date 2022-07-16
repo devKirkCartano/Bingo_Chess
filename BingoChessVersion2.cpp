@@ -1203,7 +1203,7 @@ void DifficultyLevel()
     cout << "\n\t\t\t       Levels of Difficulty\n";
     cout << "\n\n\t\t\t     A. Easy\n";
     cout << "\n\t\t\t     B. Intermediate\n";
-    cout << "\n\t\t\t     C. Difficult\n";
+    cout << "\n\t\t\t     C. Advance\n";
     cout << "\n\n\n";
 
     do
