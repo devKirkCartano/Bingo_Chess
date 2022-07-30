@@ -109,12 +109,34 @@ void GoToTutorial()
         system("cls");
         HeaderPrompt();
         SetConsoleTextAttribute(h, 14); // set text-color to yellow
-        cout << "\n\t\t\t\t     Tutorial\n";
-        cout << "\n\n\n\t\t\t\t [ In progress ]";
-        cout << "\n\n\n\n";
+        cout << "\n\t\t\t\t     TUTORIAL\n";
+        SetConsoleTextAttribute(h, 10); // set text-color to green
+        cout << "\n\n\tOBJECTIVES:";
+        SetConsoleTextAttribute(h, 14); // set text-color to yellow
+        cout << "\n\n\t* To be the first player to line up four consecutive X's or O's\n";
+        cout << "\n\t(vertically, horizontally, or diagonally).\n";
+        SetConsoleTextAttribute(h, 12); // set text - color red
+        cout << "\n\n\tRULES:";
+        SetConsoleTextAttribute(h, 14); // set text-color to yellow
+        cout << "\n\n\t* In the game, players take turns choosing from numbers 1-7\n";
+        cout << "\n\t(the number of columns). Once a number is chosen an X or O will\n";
+        cout << "\n\tbe displayed at the bottom of the column.\n";
+        cout << "\n\n\t* The goal is to form 4 consecutive X's or O's. For example,\n";
+        cout << "\n\tif Player 1 (assigned for X) manages to get 4 turns horizontally,\n";
+        cout << "\n\tvertically or diagonally, the game is over and Player 1 wins.\n";
+        cout << "\n\n\t* If neither of the players is able to achieve the goal\n";
+        cout << "\n\tand most of the slots are filled and it is impossible for any \n";
+        cout << "\n\tplayer to get a 4-in-a-row, the game is considered over.\n";
+        cout << "\n\tThere is no winner in this instance, and a re-match can be played.\n";
+        cout << "\n\n\t* In case of a re-match or if players want to play more than one\n";
+        cout << "\n\tround of Bingo Chess, player 2 in the previous round will start \n";
+        cout << "\n\tthe next round.\n";
+        cout << "\n\n\t* These rules are applicable for both game modes(multiplayer and AI),\n";
+        cout << "\n\tthe AI player is usually assigned as player 2.\n";
+
         do
         {
-            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            SetConsoleTextAttribute(h, 9); // set text-color to blue
             cout << "\n\tPress [M] to go main menu: ";
             cin >> goToMainMenu;
             if (goToMainMenu != "M" && goToMainMenu != "m")
