@@ -1341,7 +1341,7 @@ void InputForEasyAI()
     system("cls");
     HeaderPrompt();
     MatrixForAI();
-    
+
     // Change the content of 2D arrays based on input of user
     if (playerInput == "1")
     {
@@ -2549,6 +2549,53 @@ void InputForInterAI()
     }
 }
 
+void InterAI_Mode()
+{
+    while (true)
+    {
+        NumberOfTurn--;
+        SetConsoleTextAttribute(h, 10); // set text-color to green
+        InputForInterAI();
+        system("cls"); // updating screen for input
+        HeaderPrompt();
+        MatrixForAI();
+        if (CheckWinner() == 'X')
+        {
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
+            playerSymbol = "O";
+            ChangePlayerTurn();
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == 'O')
+        {
+            SetConsoleTextAttribute(h, 12); // set text - color red
+            cout << "\n\t\t\t      [ Computer Wins ! ]\n";
+            ChangePlayerTurn();  // to reset player turn
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == '/' && NumberOfTurn == 1)
+        {
+            SetConsoleTextAttribute(h, 10); // set text-color to green
+            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+            if (playerSymbol == "O")
+            {
+                ChangePlayerTurn();
+            }
+            else if (playerSymbol == "X")
+            {
+                playerSymbol == "O";
+                ChangePlayerTurn();
+            }
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        ChangePlayerTurn();
+    }
+    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+}
 void InputForAdvAI()
 {
     cout << endl;
@@ -2571,7 +2618,7 @@ void InputForAdvAI()
     system("cls");
     HeaderPrompt();
     MatrixForAI();
-    
+
     // Change the content of 2D arrays based on input of user
     if (playerInput == "1")
     {
@@ -3139,6 +3186,53 @@ void InputForAdvAI()
         }
     }
 }
+void AdvAI_Mode()
+{
+    while (true)
+    {
+        NumberOfTurn--;
+        SetConsoleTextAttribute(h, 10); // set text-color to green
+        InputForInterAI();
+        system("cls"); // updating screen for input
+        HeaderPrompt();
+        MatrixForAI();
+        if (CheckWinner() == 'X')
+        {
+            SetConsoleTextAttribute(h, 14); // set text-color to yellow
+            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
+            playerSymbol = "O";
+            ChangePlayerTurn();
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == 'O')
+        {
+            SetConsoleTextAttribute(h, 12); // set text - color red
+            cout << "\n\t\t\t      [ Computer Wins ! ]\n";
+            ChangePlayerTurn();  // to reset player turn
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        else if (CheckWinner() == '/' && NumberOfTurn == 1)
+        {
+            SetConsoleTextAttribute(h, 10); // set text-color to green
+            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
+            if (playerSymbol == "O")
+            {
+                ChangePlayerTurn();
+            }
+            else if (playerSymbol == "X")
+            {
+                playerSymbol == "O";
+                ChangePlayerTurn();
+            }
+            ClearArrayContent(); // to reset matrix content
+            break;
+        }
+        ChangePlayerTurn();
+    }
+    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+}
 int main()
 {
     do
@@ -3238,50 +3332,7 @@ int main()
                     system("cls");
                     HeaderPrompt();
                     MatrixForAI();
-                    while (true)
-                    {
-                        NumberOfTurn--;
-                        SetConsoleTextAttribute(h, 10); // set text-color to green
-                        InputForInterAI();
-                        system("cls"); // updating screen for input
-                        HeaderPrompt();
-                        MatrixForAI();
-                        if (CheckWinner() == 'X')
-                        {
-                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
-                            playerSymbol = "O";
-                            ChangePlayerTurn();
-                            ClearArrayContent(); // to reset matrix content
-                            break;
-                        }
-                        else if (CheckWinner() == 'O')
-                        {
-                            SetConsoleTextAttribute(h, 12); // set text - color red
-                            cout << "\n\t\t\t      [ Computer Wins ! ]\n";
-                            ChangePlayerTurn();  // to reset player turn
-                            ClearArrayContent(); // to reset matrix content
-                            break;
-                        }
-                        else if (CheckWinner() == '/' && NumberOfTurn == 1)
-                        {
-                            SetConsoleTextAttribute(h, 10); // set text-color to green
-                            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
-                            if (playerSymbol == "O")
-                            {
-                                ChangePlayerTurn();
-                            }
-                            else if (playerSymbol == "X")
-                            {
-                                playerSymbol == "O";
-                                ChangePlayerTurn();
-                            }
-                            ClearArrayContent(); // to reset matrix content
-                            break;
-                        }
-                        ChangePlayerTurn();
-                    }
-                    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                    InterAI_Mode();
                     do
                     {
                         SetConsoleTextAttribute(h, 14); // set text-color to yellow
@@ -3308,50 +3359,7 @@ int main()
                     system("cls");
                     HeaderPrompt();
                     MatrixForAI();
-                            while (true)
-                    {
-                        NumberOfTurn--;
-                        SetConsoleTextAttribute(h, 10); // set text-color to green
-                        InputForInterAI();
-                        system("cls"); // updating screen for input
-                        HeaderPrompt();
-                        MatrixForAI();
-                        if (CheckWinner() == 'X')
-                        {
-                            SetConsoleTextAttribute(h, 14); // set text-color to yellow
-                            cout << "\n\t\t\t      [ Player 1 Wins ! ]\n";
-                            playerSymbol = "O";
-                            ChangePlayerTurn();
-                            ClearArrayContent(); // to reset matrix content
-                            break;
-                        }
-                        else if (CheckWinner() == 'O')
-                        {
-                            SetConsoleTextAttribute(h, 12); // set text - color red
-                            cout << "\n\t\t\t      [ Computer Wins ! ]\n";
-                            ChangePlayerTurn();  // to reset player turn
-                            ClearArrayContent(); // to reset matrix content
-                            break;
-                        }
-                        else if (CheckWinner() == '/' && NumberOfTurn == 1)
-                        {
-                            SetConsoleTextAttribute(h, 10); // set text-color to green
-                            cout << "\n\t\t\t      [ It's a Draw ! ]\n";
-                            if (playerSymbol == "O")
-                            {
-                                ChangePlayerTurn();
-                            }
-                            else if (playerSymbol == "X")
-                            {
-                                playerSymbol == "O";
-                                ChangePlayerTurn();
-                            }
-                            ClearArrayContent(); // to reset matrix content
-                            break;
-                        }
-                        ChangePlayerTurn();
-                    }
-                    SetConsoleTextAttribute(h, 14); // set text-color to yellow
+                    AdvAI_Mode();
                     do
                     {
                         SetConsoleTextAttribute(h, 14); // set text-color to yellow
