@@ -33,7 +33,7 @@ int computerChoice;
 void HeaderPrompt()
 {
     SetConsoleTextAttribute(h, 10); // set text-color to green
-    cout << "\n\t\t B - I - N - G - O     C - H - E - S - S [ver.2.0] " << endl;
+    cout << "\n\t\t      B - I - N - G - O     C - H - E - S - S" << endl;
     SetConsoleTextAttribute(h, 14); // set text-color to yellow
     cout << "\n\t\t\t\t   CONSOLE GAME\n\n";
     SetConsoleTextAttribute(h, 10); // set text-color to green
