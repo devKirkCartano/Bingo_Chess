@@ -1314,7 +1314,7 @@ void GenerateComputerChoice()
     srand(time(NULL));
     computerChoice = rand() % 7 + 1;
     SetConsoleTextAttribute(h, 12); // set text - color red
-    cout << "\n  Computer Turn [O] : ";
+    cout << "\n\n  Computer Turn [O] : ";
     cout << "\n\n  Computer Choose Column : " << computerChoice << endl;
     sleep(1);
 }
@@ -1338,18 +1338,10 @@ void InputForEasyAI()
         }
 
     } while (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7");
-
-    ChangePlayerTurn();
-    if (playerSymbol == "O")
-    {
-        GenerateComputerChoice();
-        if (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7")
-        {
-            SetConsoleTextAttribute(h, 10); // set text-color to green
-            cout << "\n  [ Invalid Input ] " << endl;
-        }
-        ChangePlayerTurn();
-    }
+    system("cls");
+    HeaderPrompt();
+    MatrixForAI();
+    
     // Change the content of 2D arrays based on input of user
     if (playerInput == "1")
     {
@@ -1645,7 +1637,17 @@ void InputForEasyAI()
             }
         }
     }
-
+    ChangePlayerTurn();
+    if (playerSymbol == "O")
+    {
+        GenerateComputerChoice();
+        if (playerInput != "1" && playerInput != "2" && playerInput != "3" && playerInput != "4" && playerInput != "5" && playerInput != "6" && playerInput != "7")
+        {
+            SetConsoleTextAttribute(h, 10); // set text-color to green
+            cout << "\n  [ Invalid Input ] " << endl;
+        }
+        ChangePlayerTurn();
+    }
     playerSymbol = "O";
     if (computerChoice == 1)
     {
