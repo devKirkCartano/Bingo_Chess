@@ -2193,3 +2193,14 @@ int main()
     system("pause");
     return 0;
 }
+/*
+        GROUP 2
+    GROUP LEADER:
+        Kirk Cedrick S. Cartano
+    GROUP MEMBERS:
+        Jheg Ardales
+        Cassandra Canaliza
+        Ma. Angeline Dela Cruz
+        Merryldine Parakikay
+
+*/
